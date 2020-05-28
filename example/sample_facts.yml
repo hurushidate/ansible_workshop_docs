@@ -1,0 +1,28 @@
+---
+- hosts: fortigate
+  gather_facts: no
+  collections:
+  - fortinet.fortios
+  tasks:
+  - name: gather basic system info and physical interface port1 status facts
+    fortios_facts:
+      vdom:  "{{ vdom }}"
+      gather_subset:
+        #  - fact: 'system_current-admins_select'
+        #  - fact: 'system_firmware_select'
+        #  - fact: 'system_fortimanager_status'
+        #  - fact: 'system_ha-checksums_select'
+        - fact: 'system_interface_select'
+          filters:
+            - interface_name: 'port1'
+        #  - fact: 'system_status_select'
+        #  - fact: 'system_time_select'
+
+    - name: get ip address
+      debug:
+        msg: "{{ ansible_network_resources.system_interface_select.results.port1.ip }}"
+
+    - name: get tx and rx bytes
+      debug:
+        msg: "rx_bytes:{{ ansible_network_resources.system_interface_select.results.port1.rx_bytes }} tx_bytes:{{ ansible_network_resources.system_interface_sel
+ect.results.port1.tx_bytes }}"
