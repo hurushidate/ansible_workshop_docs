@@ -4,7 +4,7 @@
 sudo apt update
 sudo apt install -y openjdk-8-jdk
 sudo apt install -y qemu-kvm libvirt-bin libguestfs-tools virtinst
-sudo apt install -y sshpass curl openssh-client xterm
+sudo apt install -y sshpass curl openssh-client xterm tree
 #sudo apt install -y virt-manager
 
 # Things done
