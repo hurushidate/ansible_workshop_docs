@@ -3,7 +3,6 @@
   gather_facts: no
   collections:
   - fortinet.fortios
-  connection: httpapi
   tasks:
   - name: Configure global attributes.
     fortios_system_global:

@@ -1,9 +1,7 @@
 ---
 - hosts: fortigate
-  gather_fact: no
   collections:
   - fortinet.fortios
-  connection: httpapi
   tasks:
   - name: gather basic system info and physical interface port3 status facts
     fortios_facts:

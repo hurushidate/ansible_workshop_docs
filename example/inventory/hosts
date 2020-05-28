@@ -7,10 +7,11 @@ fortiadc
 fgt1 ansible_host=fgt1
 fgt2 ansible_host=fgt2
 [fortigate:vars]
-ansible_network_os=fortinet.fortios.fortios
 ansible_user=admin 
 ansible_password=m
 vdom=root
+ansible_network_os=fortinet.fortios.fortios
+ansible_connection=httpapi
 ansible_httpapi_use_ssl=no
 #Evaluation license only accepts HTTP(80) access 
 #ansible_httpapi_use_ssl=yes
