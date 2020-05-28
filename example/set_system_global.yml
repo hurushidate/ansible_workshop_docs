@@ -1,0 +1,11 @@
+---
+- hosts: fortigate
+  collections:
+  - fortinet.fortios
+  connection: httpapi
+  tasks:
+  - name: Configure global attributes.
+    fortios_system_global:
+      vdom:  "{{ vdom }}"
+      system_global:
+        alias: "{{ ansible_host }}"
