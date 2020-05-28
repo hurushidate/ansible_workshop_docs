@@ -15,6 +15,7 @@ ansible_httpapi_use_ssl=no
 #Evaluation license only accepts HTTP(80) access 
 #ansible_httpapi_use_ssl=yes
 ansible_httpapi_validate_certs=no
+ansible_python_interpreter=/usr/bin/python3
 
 [fortimanager]
 
