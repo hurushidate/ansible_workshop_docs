@@ -41,7 +41,7 @@ export SF_MAC_ADMIN=08:00:27:4c:22:41
 mkdir ~/fgt1
 cd ~/fgt1
 
-cp ~/${FORTIGATE_QCOW2} ./fortios.qcow2
+cp ${FORTIGATE_QCOW2} ./fortios.qcow2
 echo "${SF_IP_ADMIN} ${SF_NAME}" >> /etc/hosts
 
 mkdir -p cfg-drv-fgt/openstack/latest/
@@ -102,7 +102,7 @@ export SF_MAC_ADMIN=08:00:27:4c:22:42
 mkdir ~/fgt2
 cd ~/fgt2
 
-cp ~/${FORTIGATE_QCOW2} ./fortios.qcow2
+cp ${FORTIGATE_QCOW2} ./fortios.qcow2
 echo "${SF_IP_ADMIN} ${SF_NAME}" >> /etc/hosts
 
 mkdir -p cfg-drv-fgt/openstack/latest/
